@@ -1,17 +1,17 @@
 FROM node:slim
 
-MAINTAINER appotry <andycrusoe@gmail.com>
+MAINTAINER smartheye <allenofchina@163.com>
 
-LABEL maintainer="andycrusoe@gmail.com"
-LABEL repository="https://github.com/appotry/docker-hexo"
+LABEL maintainer="allenofchina@163.com"
+LABEL repository="https://github.com/smartheye/docker-hexo"
 LABEL homepage="https://blog.17lai.site"
 
 # Set the server port as an environmental
 ENV HEXO_SERVER_PORT=4000
 
 # Set the git username and email
-ENV GIT_USER="appotry"
-ENV GIT_EMAIL="andycrusoe@gmail.com"
+ENV GIT_USER="smartheye"
+ENV GIT_EMAIL="allenofchina@163.com"
 
 # Install requirements
 RUN apt-get update && \

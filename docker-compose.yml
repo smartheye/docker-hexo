@@ -1,0 +1,19 @@
+services:
+
+  hexo:
+    container_name: hexo
+    image: smartheye/hexo:latest
+    hostname: hexo
+    ports:
+      - "4000:4000"
+    volumes:
+      - ${USERDIR}/hexo/blog:/app
+    env_file:
+      - .env  # 部分公用环境变量放到这里，以是的多个docker之间共享环境变量
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - GIT_USER="smartheye"
+      - GIT_EMAIL="allenofchina@163.com"
+    restart: always

@@ -19,7 +19,6 @@ else
     cnpm install 
     cnpm install --save \
         hexo-generator-searchdb \
-        hexo-admin \
         hexo-deployer-git \
         hexo-generator-feed \
         hexo-wordcount \
@@ -81,6 +80,6 @@ if [ ! -f /app/userRun.sh ]; then
     /app/userRun.sh; 
 else 
     echo "run userRun.sh"
-    /app/userRun.sh; 
+    sh /app/userRun.sh; 
 fi
 pm2 logs hexo_run

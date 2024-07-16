@@ -9,9 +9,9 @@
 
 > 博主开源定制，推荐使用！省去您大量环境配置时间。
 
-- [docker-hub](https://hub.docker.com/r/bloodstar/hexo)
-- [Github-hexo](https://github.com/appotry/docker-hexo)
-- 效果演示 <a title="My Blog Site" target="_blank" href="https://blog.17lai.site/"><img src="https://img.shields.io/badge/%E5%A4%9C%E6%B3%95%E4%B9%8B%E4%B9%A6%E5%8D%9A%E5%AE%A2%20(blog)-blog.17lai.site-orange" /></a>
+- [docker-hub](https://hub.docker.com/r/smartheye/hexo)
+- [Github-hexo](https://github.com/smartheye/docker-hexo)
+- 效果演示 `<a title="My Blog Site" target="_blank" href="https://blog.17lai.site/"><img src="https://img.shields.io/badge/%E5%A4%9C%E6%B3%95%E4%B9%8B%E4%B9%A6%E5%8D%9A%E5%AE%A2%20(blog)-blog.17lai.site-orange" />``</a>`
 
 使用推荐Docker来搭配本文，阅读使用，将更省事，方便，快捷。hexo环境一键搞定！
 
@@ -28,7 +28,8 @@ docker create --name=hexo \
 -p 4000:4000 \
 bloodstar/hexo
 ```
-#### docker compose 
+
+#### docker compose
 
 > 推荐使用 docker compose 来管理docker
 
@@ -52,7 +53,7 @@ services:
       - TZ=${TZ}
       - GIT_USER="appotry"
       - GIT_EMAIL="andycrusoe@gmail.com"
-      
+    
       # 主要为了内部npm网络访问顺利
       # - HTTP_PROXY=http://192.168.0.100:1089
       # - HTTPS_PROXY=http://192.168.0.100:1089
@@ -61,13 +62,11 @@ services:
 
 #### 环境变量
 
-
 | 环境变量         | 作用                                |
 | ---------------- | ----------------------------------- |
 | HEXO_SERVER_PORT | pm2 http 服务器运行端口，默认是4000 |
 | GIT_USER         | git 环境变量用户名                  |
 | GIT_EMAIL        | git 环境变量邮箱                    |
-
 
 #### ssh key 部署
 
@@ -110,7 +109,6 @@ hexo new post “文章名称” #新增文章
 ```
 
 更详细教程戳这里 [Hexo入门篇](https://blog.17lai.site/posts/40300608/#Hexo%E5%85%A5%E9%97%A8%E7%AF%87)
-
 
 #### 用户自动运行脚本
 
@@ -174,6 +172,7 @@ echo "=====User CMD end!====="
 ```
 
 设置代理
+
 ```bash
 # 如果网络访问不顺利，可以在访问网络之前添加代理
 
@@ -202,6 +201,7 @@ export http_proxy=http://xray:1089;export https_proxy=http://xray:1089
 - [Hexo插件](https://hexo.io/plugins/)
 
 ## **Hexo 中文化环境配置**
+
 附加安装一大堆使用插件，并且下载Matery主题
 
 Github: [appotry/docker-hexo](https://github.com/appotry/docker-hexo)
@@ -216,7 +216,7 @@ The image is available directly from [Docker Hub](https://hub.docker.com/r/blood
 
 A tutorial is available at [spurin.com](https://spurin.com/2020/01/04/Creating-a-Blog-Website-with-Docker-Hexo-Github-Free-Hosting-and-HTTPS/)
 
-Latest update locks the node version to 13-slim rather than slim (which at the time of writing is 14), whilst Hexo appears to work for most areas, there is at present an outstanding issue that prevents the `hexo deploy` working with 14.  See [Hexo 4275]( https://github.com/hexojs/hexo/issues/4275)
+Latest update locks the node version to 13-slim rather than slim (which at the time of writing is 14), whilst Hexo appears to work for most areas, there is at present an outstanding issue that prevents the `hexo deploy` working with 14.  See [Hexo 4275](https://github.com/hexojs/hexo/issues/4275)
 
 ## Getting Started
 
